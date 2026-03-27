@@ -253,7 +253,7 @@ CSS = """
 footer { display: none !important; }
 """
 
-with gr.Blocks(title="TPM / NPI Expert", theme=gr.themes.Default(), css=CSS) as demo:
+with gr.Blocks(title="TPM / NPI Expert") as demo:
 
     gr.Markdown(f"""
 # TPM / NPI Expert Knowledge Worker
@@ -273,9 +273,6 @@ Expert Q&A across NPI phase gates, APQP/PPAP, RAID management, SAFe, hybrid prog
                     chatbot = gr.Chatbot(
                         label="TPM / NPI Expert",
                         height=520,
-                        type="messages",
-                        show_copy_button=True,
-                        avatar_images=(None, "https://api.dicebear.com/7.x/bottts/svg?seed=tpm"),
                     )
                     with gr.Row():
                         msg_box = gr.Textbox(
@@ -377,7 +374,6 @@ Select a program to view tasks, run a phase gate analysis, or ask the expert a c
                             dash_chatbot = gr.Chatbot(
                                 label="Context-aware expert",
                                 height=400,
-                                type="messages",
                             )
                             with gr.Row():
                                 dash_input = gr.Textbox(
@@ -432,4 +428,4 @@ Select a program to view tasks, run a phase gate analysis, or ask the expert a c
 
 
 if __name__ == "__main__":
-    demo.launch(server_name="0.0.0.0", server_port=7860, share=False)
+    demo.launch(server_name="0.0.0.0", server_port=7860, share=False, theme=gr.themes.Default(), css=CSS)
