@@ -1,0 +1,45 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+.env 
+__pycache__/
+*.pyc
+*.pyo
+
+# Vector store — regenerate with: uv run scripts/ingest.py --reset
+chroma_db/
+
+# Eval results — generated output
+evaluation/eval_results_*.jsonl
+
+
+# Knowledge base documents — provide your own
+data/knowledge_base/*.md
+!data/knowledge_base/README.md
+
+# macOS
+.DS_Store
+ 
+# IDE
+.vscode/
+.idea/
+*.egg-info/
+ 
+# Cursor
+.cursor/
+.cursorignore
+.cursorindexingignore
+ 
+# uv
+.uv/
+uv.lock
+.python-version
+
+smoke_tests.txt

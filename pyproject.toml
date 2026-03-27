@@ -1,0 +1,16 @@
+[project]
+name = "tpm-npi-expert"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "anthropic",
+    "openai",
+    "chromadb",
+    "sentence-transformers",
+    "torch",
+    "transformers",
+    "tiktoken",
+    "python-dotenv",
+    "gradio>=5.0",
+    "rich",
+]
